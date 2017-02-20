@@ -1,0 +1,76 @@
+body {
+    padding: 60px;
+    background: #efefef;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18.11px;
+    position: relative;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: top;
+    transition: background 0.5s;
+}
+
+button, input {
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    outline: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.hide {
+    display: none;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.popup-message {
+    width: 500px;
+    border-radius: 20px;
+    padding: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: #fff;
+    margin: 200px auto 0;
+}

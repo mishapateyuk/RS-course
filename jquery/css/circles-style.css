@@ -1,0 +1,146 @@
+.circles {
+  width: 200px;
+  height: 800px;
+  background: #fff;
+  position: absolute;
+  top: 57px;
+  left: 424px;
+  text-align: center;
+}
+
+.circle-around,
+.circle-fill,
+.circle-straight {
+  width: 160px;
+  height: 160px;
+  background: #efefef;
+  border-radius: 50%;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.circle-fill-first-value,
+.circle-fill-second-value,
+.circle-fill-third-value,
+.circle-fill-empty-value,
+.circle-fill-additional {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-fill-empty-value,
+.circle-fill-additional {
+  border: 80px solid #efefef;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  width: 0px;
+  height: 0px;
+  transform: rotate(150deg);
+}
+
+.circle-fill-additional {
+  display: none;
+}
+
+.circle-fill-first-value {
+  border: 80px solid #efefef;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  width: 0px;
+  height: 0px;
+  transform: rotate(-45deg);
+}
+
+.circle-fill-second-value {
+  border: 80px solid #efefef;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  width: 0px;
+  height: 0px;
+  transform: rotate(0deg);
+}
+
+.circle-fill-third-value {
+  border: 80px solid #efefef;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  width: 0px;
+  height: 0px;
+  transform: rotate(60deg);
+}
+
+.circle-around-inside {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 10;;
+  text-align: center;
+  line-height: 120px;
+  font-size: 30px;
+}
+
+.circle-straight-first-value {
+  width: 160px;
+  background: #56e5f6;
+  position: absolute;
+}
+
+.circle-straight-second-value {
+  width: 160px;
+  background: #4cd9c0;
+  position: absolute;
+}
+
+.circle-straight-third-value {
+  width: 160px;
+  background: #ec747d;
+  position: absolute;
+}
+
+.circle-input-first-value,
+.circle-input-second-value,
+.circle-input-third-value {
+  width: 160px;
+  height: 51px;
+  border-radius: 12px;
+  font-size: 20.38px;
+  padding: 13px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  margin: 0 0 10px 0;
+}
+
+.circle-input-first-value {
+  border: 2px solid #56e5f6;
+}
+
+.circle-input-second-value{
+  border: 2px solid #4cd9c0;
+}
+
+.circle-input-third-value{
+  border: 2px solid #ec747d;
+}
+
+.circle-button {
+  width: 120px;
+  border-radius: 12px;
+  font-size: 20px;
+  line-height: 46px;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.circle-button:hover {
+  background: #4cd9c0;
+}

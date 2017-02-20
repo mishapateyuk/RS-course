@@ -1,0 +1,115 @@
+.converter {
+    width: 307px;
+    background: #ffffff;
+    margin-bottom: 71px;
+}
+
+.currency-list li {
+    height: 109px;
+    padding: 28px 25px 27px 27px;
+    box-sizing: border-box;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+.currency-list li:not(:last-child) {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.currency-name {
+    display: inline-block;
+    height: 54px;
+    width: 72px;
+    border-right: 1px solid #d7d7d7;
+    padding-left: 2px;
+    line-height: 57px;
+    color: #b2b2b2;
+}
+
+.currency-input {
+    height: 54px;
+    float: right;
+    width: 175px;
+    font-size: 40.75px;
+    color: #b2b2b2;
+    letter-spacing: 2px;
+    text-align: right;
+}
+
+.converter-menu {
+    background: #526e82;
+    height: 64px;
+}
+
+.converter-menu button {
+    position: relative;
+    background: #526e82;
+    transition: background 0.5s;
+}
+
+.converter-menu button:hover {
+    background: #ff8989;
+}
+
+button.active {
+    background: #ff8989;
+}
+
+.convert-button {
+    width: 102px;
+    height: 64px;
+}
+
+.convert-button:before {
+    content: "";
+    display: inline-block;
+    background: url("../img/convertor-spritesheet.png") -40px no-repeat;
+    width: 71px;
+    height: 50px;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+}
+
+.number-pad {
+    width: 70px;
+    height: 64px;
+    float: right;
+}
+
+.number-pad:before {
+    content: "";
+    display: inline-block;
+    background: url("../img/convertor-spritesheet.png") -105px no-repeat;
+    width: 55px;
+    height: 57px;
+    position: absolute;
+    top: 2px;
+    left: 10px;
+}
+
+.add-currency {
+    position: relative;
+    width: 80px;
+    height: 64px;
+    float: right;
+}
+
+.add-currency::after,
+.add-currency::before {
+    content: '';
+    position: absolute;
+    top: 31px;
+    left: 26px;
+    width: 28px;
+    height: 4px;
+    background-color: #3b5060;
+}
+
+.add-currency::before {
+    transform: rotate(90deg);
+}
+
+.add-currency.minus::before {
+    display: none;
+}

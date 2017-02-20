@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="finance-widget widget">
+        <ul class="finance-list">
+            <li class="finance-item">
+                <div class="currency-type">
+                    USD
+                </div>
+                <div class="money-amount">
+                    <input type="text" placeholder="$356.3">
+                </div>
+            </li>
+            <li class="finance-item">
+                <div class="currency-type">
+                    GBP
+                </div>
+                <div class="money-amount">
+                    <input type="text" placeholder="£156.3">
+                </div>
+            </li>
+        </ul>
+        <div class="widget-nav clearfix">
+            <button class="widget-button money-graph active-button"></button>
+            <button class="widget-button money-menu"></button>
+            <button class="widget-button add-currency add"></button>
+        </div>
+    </div>
+    <div class="calendar-widget widget">
+        <div class="calendar-nav">
+            <button class="prev-date"></button>
+            <div class="date">
+                <p class="year">2012</p>
+                <p class="month">july</p>
+            </div>
+            <button class="next-date"></button>
+        </div>
+        <table class="calendar-table">
+            <tr class="table-head">
+                <th>S</th>
+                <th>M</th>
+                <th>T</th>
+                <th>W</th>
+                <th>T</th>
+                <th>F</th>
+                <th>S</th>
+            </tr>
+            <tr>
+                <td><a href="">1</a></td>
+                <td><a href="">2</a></td>
+                <td><a href="">3</a></td>
+                <td><a href="">4</a></td>
+                <td><a href="">5</a></td>
+                <td><a href="" class="current-day">6</a></td>
+                <td><a href="">7</a></td>
+            </tr>
+            <tr>
+                <td><a href="">8</a></td>
+                <td><a href="">9</a></td>
+                <td><a href="">10</a></td>
+                <td><a href="">11</a></td>
+                <td><a href="">12</a></td>
+                <td><a href="">13</a></td>
+                <td><a href="">14</a></td>
+            </tr>
+            <tr>
+                <td><a href="">15</a></td>
+                <td><a href="">16</a></td>
+                <td><a href="">17</a></td>
+                <td><a href="">18</a></td>
+                <td><a href="">19</a></td>
+                <td><a href="">20</a></td>
+                <td><a href="">21</a></td>
+            </tr>
+            <tr>
+                <td><a href="">22</a></td>
+                <td><a href="">23</a></td>
+                <td><a href="">24</a></td>
+                <td><a href="">25</a></td>
+                <td><a href="">26</a></td>
+                <td><a href="">27</a></td>
+                <td><a href="">28</a></td>
+            </tr>
+            <tr>
+                <td><a href="">29</a></td>
+                <td><a href="">30</a></td>
+                <td><a href="">31</a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+                <td><a href=""></a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="weather-widget widget">
+        <ul class="weather-slider">
+            <li class="weather-display">
+                <img src="img/weather.jpg" alt="weather-picture">
+                <div class="weather-description">
+                    <div class="temperature">
+                        <img src="img/73deg.png" alt="73deg">
+                    </div>
+                    <p class="city-county">Zagora, Greece</p>
+                    <p class="local-time">8:34 am</p>
+                </div>
+            </li>
+        </ul>
+        <div class="slider-dots">
+            <a href="#" class="slider-dot"></a>
+            <a href="#" class="slider-dot"></a>
+            <a href="#" class="slider-dot"></a>
+        </div>
+        <div class="widget-nav">
+            <button class="widget-button fahrenheit active-button"></button>
+            <button class="widget-button celsius"></button>
+            <button class="widget-button add-weather add"></button>
+            <button class="widget-button weather-menu"></button>
+        </div>
+    </div>
+    <div class="dialog-widget widget">
+        <div class="widget-nav clearfix">
+            <button class="widget-button dialog-menu"></button>
+            <button class="widget-button add-dialog add"></button>
+        </div>
+        <ul class="dialog-list">
+            <li class="dialog-list-item">
+                <div class="interlocutor-avatar">
+                    <img src="img/avatar-1.jpg" alt="lozhkin">
+                </div>
+                <div class="dialog-details">
+                    <p class="interlocutor">
+                        Yaroslav Lozhkin
+                    </p>
+                    <p class="message-detail">
+                        Alright got it!
+                    </p>
+                </div>
+                <div class="user-status online-user"></div>
+            </li>
+            <li class="dialog-list-item">
+                <div class="interlocutor-avatar">
+                    <img src="img/avatar-2.jpg" alt="Zenaty">
+                </div>
+                <div class="dialog-details">
+                    <p class="interlocutor">
+                        Michael Zenaty
+                    </p>
+                    <p class="message-detail sent-message">
+                        Sent
+                    </p>
+                </div>
+                <div class="user-status offline-user"></div>
+            </li>
+            <li class="dialog-list-item">
+                <div class="interlocutor-avatar">
+                    <img src="img/avatar-3.jpg" alt="Riley">
+                </div>
+                <div class="dialog-details">
+                    <p class="interlocutor">
+                        Wells Riley
+                    </p>
+                    <p class="message-detail user-is-typing">
+                        Typing...
+                    </p>
+                </div>
+                <div class="user-status"></div>
+            </li>
+            <li class="dialog-list-item">
+                <div class="interlocutor-avatar">
+                    <img src="img/avatar-4.jpg" alt="Vickers">
+                </div>
+                <div class="dialog-details">
+                    <p class="interlocutor">
+                        Matt Vickers
+                    </p>
+                    <p class="message-detail not-delevired-message">
+                        Not delivered
+                    </p>
+                </div>
+                <div class="user-status"></div>
+            </li>
+            <li class="dialog-list-item">
+                <div class="interlocutor-avatar">
+                    <img src="img/avatar-5.jpg" alt="Manian">
+                </div>
+                <div class="dialog-details">
+                    <p class="interlocutor">
+                        Divya Manian
+                    </p>
+                    <p class="message-detail">
+                        You can download it on git blabalbal
+                    </p>
+                </div>
+                <div class="user-status online-user"></div>
+            </li>
+            <li class="dialog-list-item">
+                <div class="interlocutor-avatar">
+                    <img src="img/avatar-6.jpg" alt="Thomas">
+                </div>
+                <div class="dialog-details">
+                    <p class="interlocutor">
+                        Vin Thomas
+                    </p>
+                    <p class="message-detail">
+                        Thank you!
+                    </p>
+                </div>
+                <div class="user-status"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="authorization-widget widget">
+        <form action="URL" method="post">
+            <div class="email active-authorization">
+                <input type="text" name="user-email" placeholder="Email Address...">
+            </div>
+            <div class="password">
+                <input type="password" name="user-password" placeholder="Password...">
+            </div>
+            <div class="widget-nav">
+                <button class="widget-button sign-up-button">
+                    SIGN UP
+                </button>
+                <button class="widget-button sign-in-button">
+                    SIGN IN
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="input-style-guide widget clearfix">
+        <div class="left-column">
+            <input type="text" class="valid-input input-text-style" placeholder="Valid input">
+            <input type="range" min="0" max="100" step="1" value="69">
+            <input type="text" class="invalid-input input-text-style" placeholder="Invalid input">
+        </div>
+        <div class="right-column">
+            <input type="checkbox" class="checked-checkbox" id="checkbox" checked>
+            <label for="checkbox"></label>
+            <input type="radio" class="checked-radio" id="checked-radio" checked>
+            <label for="checked-radio"></label>
+            <input type="radio" class="not-checked-radio" id="not-checked-radio">
+            <label for="not-checked-radio"></label>
+        </div>
+    </div>
+    <div class="music-player-widget clearfix">
+        <div class="left-column">
+            <img src="img/album-cover.jpg" alt="album-cover" class="album-cover">
+            <button class="follow-band">FOLLOW</button>
+        </div>
+        <div class="left-column">
+            <h2 class="band-name">
+                Faded Paper Figures
+            </h2>
+            <h3 class="song-name">
+                Invent it all again
+            </h3>
+            <div class="progress-indicator clearfix">
+                <div class="full-indicator">
+                    <div class="song-indicator downloaded-indicator" style="width: 79.5%"></div>
+                    <div class="song-indicator current-indicator" style="width: 61.5%"></div>
+                </div>
+                <div class="current-song-time right-column">-1:57</div>
+            </div>
+            <div class="player-panel-control">
+                <button class="control-button play-button playing"></button>
+                <button class="control-button prev-song-button"></button>
+                <button class="control-button next-song-button"></button>
+                <button class="control-button shuffle-button"></button>
+                <button class="control-button repeat-button"></button>
+                <button class="control-button like-button liked"></button>
+                <button class="control-button add-song-button"></button>
+                <button class="control-button share-song-button"></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

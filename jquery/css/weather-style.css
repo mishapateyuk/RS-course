@@ -1,0 +1,190 @@
+.weather {
+    width: 307px;
+    height: 312px;
+    position: relative;
+}
+
+.add-weather-form,
+.weather-list {
+    display: none;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    height: 248px;
+    width: 307px;
+    padding: 10px;
+}
+
+.weather-list {
+    list-style: square inside;
+}
+
+.weather-list li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.add-weather-input {
+    width: 200px;
+    height: 51px;
+    border-radius: 12px;
+    font-size: 20.38px;
+    padding: 13px;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+    margin: 0 0 10px 0;
+    border: 2px solid #56e5f6;
+}
+
+.weather-menu {
+    height: 64px;
+    background: #ffffff;
+    font-size: 0;
+}
+
+.weather-menu button {
+    transition: background 0.5s;
+    background: #ffffff;
+    color: #dedede;
+    position: relative;
+}
+
+.weather-menu button:hover,
+.weather-menu .active-weather-button {
+    background: #ff8989;
+    color: #ffffff;
+}
+
+.scale-button {
+    width: 79px;
+    height: 100%;
+    font-size: 40.75px;
+}
+
+
+.add-place-button {
+    width: 79px;
+    height: 100%;
+}
+
+.add-place-button:before {
+    content: "";
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: url("../img/weather-spritesheet.png") -6px no-repeat;
+    position: absolute;
+    top: 9px;
+    left: 23px;
+}
+
+.list-view-button {
+    width: 70px;
+    height: 100%;
+}
+
+.list-view-button:before {
+    content: "";
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    background: url("../img/weather-spritesheet.png") -55px no-repeat;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+}
+
+.weather-info {
+    width: 240px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 11px;
+    box-sizing: border-box;
+    z-index: 900;
+}
+
+.weather-info p {
+    font-size: 16.75px;
+    letter-spacing: 1px;
+    line-height: 21px;
+}
+
+.weather-info .temperature {
+    display: inline-block;
+    font-size: 50px;
+    line-height: 48px;
+    position: relative;
+}
+
+.weather-info .temperature:after {
+    content: "\00B0";
+    position: absolute;
+    font-size: 25px;
+    top: -19px;
+    right: -10px;
+}
+
+.weather-board {
+    height: 248px;
+    width: 307px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+    right: 0;
+    z-index: 900;
+    bottom: 0;
+    height: 16px;
+    padding: 12px 11px 11px 10px;
+}
+
+.slider label {
+    cursor: pointer;
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #05aeb3;
+    margin: 0 4px 4px 0;
+}
+
+.slider label.active-slide,
+.slider label:hover {
+    background: #076164;
+}
+
+.slider label:last-child {
+    margin-right: 0;
+}
+
+.slide {
+    width: 307px;
+    height: 248px;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 10;
+    transition: left 0s .75s;
+    background: url("../img/greece.jpg");
+    background-size: cover;
+}
+
+[id^="slide"]:checked + .slide {
+    left: 0;
+    z-index: 100;
+    transition: left .65s ease-out;
+}
+
+.slide-2 {
+    background-image: url("../img/minsk.jpg");
+}
+.slide-3 {
+    background-image: url("../img/warsaw.jpg");
+}

@@ -1,0 +1,192 @@
+.chat {
+    width: 307px;
+    background: #ffffff;
+    position: absolute;
+    top: 60px;
+    right: 60px;
+}
+
+.chat-menu {
+    height: 64px;
+    background: #4cd9c0;
+}
+
+.chat-menu .menu-button {
+    width: 75px;
+    height: 100%;
+    float: left;
+}
+
+.chat-menu .menu-button:before {
+    content: "";
+    width: 50px;
+    height: 100%;
+    background: url("../img/chat-spritesheet.png") -81px 7px no-repeat;
+    display: inline-block;
+}
+
+.chat-menu button {
+    transition: background 0.5s;
+    position: relative;
+    background: #4cd9c0;
+}
+
+.chat-menu button:hover {
+    background: #41c0a9;
+}
+
+.chat-menu input {
+	background-color: #4cd9c0;
+    height: 50px;
+    padding: 7px 5px;
+    width: 165px;
+    font-size: 20px;
+    color: white;
+}
+
+.chat-menu .add-dlg-button {
+    width: 55px;
+    height: 100%;
+    float: right;
+}
+
+.chat-menu .add-dlg-button:before {
+    content: "";
+    width: 55px;
+    height: 100%;
+    background: url("../img/chat-spritesheet.png") 4px 8px no-repeat;
+    display: inline-block;
+}
+
+.message-list {
+    background: #ffffff;
+}
+
+.message-list li {
+    min-height: 55px;
+    transition: background 1s;
+    padding: 15px 16px 12px 16px;
+    position: relative;
+    color: #bac2c7;
+    cursor: pointer;
+}
+
+.message-list li:not(:last-child) {
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.message-list li:hover {
+    background: #f2f2f2;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    float: left;
+}
+
+.message-list h3 {
+    font-size: 18.11px;
+    margin-left: 69px;
+    letter-spacing: 1px;
+    margin-bottom: 3px;
+    width: 200px;
+}
+
+.message-list .message {
+    font-size: 13.58px;
+    margin-left: 69px;
+    letter-spacing: 1px;
+    text-overflow: ellipsis;
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.online:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #4cd9c0;
+    position: absolute;
+    right: 16px;
+    top: 35px;
+}
+
+.offline:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ec747d;
+    position: absolute;
+    right: 16px;
+    top: 38px;
+}
+
+.busy:after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #56e5f6;
+    position: absolute;
+    right: 15px;
+    top: 35px;
+}
+
+.sent .message:after {
+    content: "Sent";
+    width: 50px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    left: 105px;
+    top: 45px;
+}
+
+.sent .message:before {
+    content: "";
+    background: url("../img/chat-spritesheet.png") -137px -5px no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 45px;
+    left: 80px;
+}
+
+.not-delivered .message:after {
+    content: "Not delivered";
+    width: 50px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    left: 105px;
+    top: 45px;
+}
+
+.not-delivered .message:before {
+    content: "";
+    background: url("../img/chat-spritesheet.png") -52px -4px no-repeat;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    position: absolute;
+    top: 45px;
+    left: 77px;
+}
+
+.typing .message:after {
+    content: "Typing ...";
+    font-style: italic;
+    width: 50px;
+    height: 10px;
+    display: inline-block;
+    position: absolute;
+    left: 83px;
+    top: 45px;
+}

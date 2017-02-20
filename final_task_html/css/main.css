@@ -1,0 +1,1011 @@
+@font-face {
+    font-family: Aparajita;
+    src: url('../fonts/aparajb.ttf');
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Lato', sans-serif;
+    color: #434343;
+}
+
+html,
+body,
+.wrapper {
+    height: 100%;
+}
+
+main {
+    font-size: 0;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.wrapper {
+    width: 1440px;
+    padding: 0 135px; 
+    margin: 0 auto;
+}
+
+.background-main-color {
+    background-color: #05aecc;
+}
+
+.background-additional-color {
+    background-color: #f0626e;
+}
+
+.background-contrast-color {
+    background-color: #434343;
+}
+
+.content {
+  box-sizing: border-box;
+  min-height: 100%;
+  padding-bottom: 490px;
+}
+
+.page-header {
+    height: 128px;
+    font-size: 0;
+    margin-bottom: 13px;
+}
+
+.logo,
+.nav-wrapper {
+    display: inline-block;
+    height: 128px;
+    vertical-align: top;
+}
+
+.logo {
+    padding-top: 19px;
+    padding-left: 10px;
+    width: 189px;
+}
+
+.nav-wrapper {
+    width: 981px;
+    background-color: #f6f6f6;
+}
+
+.site-nav {
+    height: 38px;
+    line-height: 38px;
+    background-color: #fff;
+    letter-spacing: 1px;
+}
+
+.shop-nav {
+    height: 90px;
+    line-height: 90px;
+    color: #fff;
+}
+
+.site-nav a:hover{
+    text-decoration: underline;
+}
+
+.price:hover,
+.shop-actions-icon:hover,
+.shop-link:hover,
+.shop-nav li:hover {
+    background-color: #fff;
+    color: #f0626e;
+}
+
+.site-nav,
+.shop-nav {
+    text-align: right;
+    font-size: 0;
+    transition: 0.5s;
+}
+
+.shop-nav .fa {
+    margin-left: 10px;
+    font-size: 2.5rem;
+}
+
+.site-nav li,
+.shop-nav li {
+    display: inline-block;
+    font-size: 1.6rem;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.shop-nav li:not(:last-child) {
+    margin-right: 5px;
+}
+
+.site-nav li:not(:last-child) {
+    margin-right: 29px;
+}
+
+.reg,
+.sign-in {
+    width: 116px;
+}
+
+.cart,
+.whislost {
+    width: 142px;
+}
+
+.shop-sections {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    height: 71px;
+    padding: 0 117px;
+    line-height: 71px;
+    color: #fff;
+}
+
+.shop-sections a {
+    padding: 0 25px;
+    font-size: 1.6rem;
+    transition: 0.5s;
+}
+
+.shop-sections a:hover {
+    color: #ef5966;
+    background-color: #fff;
+}
+
+.show-tooltip:hover .tooltip-wrapper {
+    display: block;
+}
+
+.show-tooltip {
+    position: relative;
+}
+
+.tooltip-wrapper {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 71px;
+    padding: 25px 20px;
+    width: 263px;
+    height: 388px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 0;
+    box-shadow: 0 0 16px 0 grey;
+}
+
+.tooltip-wrapper img {
+    height: 77px;
+    width: 72px;
+    vertical-align: top;
+    margin-right: 12px;
+}
+
+.tooltip-wrapper div {
+    display: inline-block;
+    height: 77px;
+    vertical-align: top;
+    width: 139px;
+}
+
+.tooltip-wrapper li:not(:last-child) {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #cacaca;
+}
+
+.tooltip-wrapper li:last-child {
+    height: 20px;
+    line-height: 1.6rem;
+    color: #ef5966;
+    font-size: 1.6rem;
+}
+
+.tooltip-wrapper h3 {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+    margin-bottom: 5px;
+    color: #ef5966;
+}
+
+.tooltip-wrapper p {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: #434343;
+    margin-bottom: 5px;
+}
+
+.tooltip-wrapper button {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    width: 117px;
+    height: 23px;
+    color: #fff;
+    vertical-align: top;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.ad-block {
+    margin-bottom: 26px;
+}
+
+.ad-left {
+    display: inline-block;
+    width: 670px;
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.ad-right {
+    display: inline-block;
+    width: 495px;
+    vertical-align: top;
+}
+
+.mens-wear .items-header {
+    width: 350px;
+    bottom: 65px;
+    left: 0;
+}
+
+.mens-additional-description {
+    position: absolute;
+    font-family: Aparajita;
+    width: 350px;
+    left: 0px;
+    bottom: 14px;
+    padding: 11px 15px;
+    background-color: rgba(240, 98, 110, 0.7);
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.items-header {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+}
+
+.items-header h2 {
+    font-family: Aparajita;
+}
+
+.truck-actions {
+    position: relative;
+}
+
+.truck-actions:hover::before,
+.truck-actions:hover::after {
+    display: block;
+}
+
+.truck-actions::before {
+    content: 'add to cart';
+    display: none;
+    position: absolute;
+    font-size: 1.3rem;
+    color: #434343;
+    padding: 0 25px;
+    line-height: 28px;
+    height: 28px;
+    border: 1px solid #f0626e;
+    border-radius: 5px;
+    background-color: #fff;
+    top: -35px;
+    left: -50%;
+    width: 61px;
+}
+
+.truck-actions::after {
+    display: none;
+    content: '';
+    position: absolute;
+    border: 5px solid transparent;
+    border-top-color: #fff;
+    top: -7px;
+    left: 38%;
+}
+
+.wear-description {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    width:  100%;
+}
+
+.shop-actions-wrapper {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.shop-actions {
+    position: absolute;
+    font-size: 0;
+    height: 53px;
+    color: #fff;
+}
+
+.shop-link {
+    display: inline-block;
+    padding: 0 13px;
+    line-height: 5.3rem;
+    vertical-align: top;
+    font-size: 1.6rem;
+    transition: 0.5s;
+}
+
+.shop-link:hover {
+    background-color: 
+}
+
+.gift-action {
+    background-color: #00a1be;
+}
+
+.shop-actions-icon {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 2.5rem;
+    line-height: 5.3rem;
+    padding: 0 14px;
+    transition: 0.5s;
+}
+
+.mens-wear-title {
+    font-size: 5.8rem;
+    color: #ef5966;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.mens-wear {
+    position: relative;
+    height: 572px;
+    margin-bottom: 5px;
+    background-image: url('../img/mens-wear.jpg');
+    background-size: cover;
+}
+
+.mens-wear:hover .shop-actions-wrapper {
+    display: block;
+}
+
+.mens-wear .shop-actions {
+    right: 0;
+    top: 100px;
+}
+
+.search-form {
+    height: 169px;
+    margin-bottom: 5px;
+    padding: 51px 53px;
+}
+
+.search-form input {
+    padding-left: 25px;
+    margin-right: 33px;
+    width: 485px;
+    height: 71px;
+    line-height: 71px;
+    font-size: 1.6rem;
+    vertical-align: middle;
+}
+
+.search-form button {
+    position: relative;
+    vertical-align: middle;
+    width: 46px;
+    height: 46px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.search-form button:hover,
+.search-form button:hover::before {
+    background-color: #05aecc;
+}
+
+.search-form button::before,
+.search-form button::after,
+.left-arrow::before,
+.left-arrow::after,
+.right-arrow::before,
+.right-arrow::after,
+.jewerly-additional span::after,
+.jewerly-additional span::before {
+    content: '';
+    position: absolute;
+}
+
+.search-form button::before {
+    width: 12px;
+    height: 8px;
+    border-radius: 4px 0 0 4px;
+    transform: rotate(-40deg);
+    top: 40px;
+    left: -8px;
+    background-color: #fff;
+    transition: 0.5s;
+}
+
+.search-form button::after {
+    width: 36px;
+    height: 36px;
+    top: 5px;
+    left: 5px;
+    border-radius: 50%;
+    background-color: #f0626e;
+}
+
+.crafts {
+    position: relative;
+    height: 335px;
+    background-image: url('../img/craft-shop.jpg');
+    background-size: cover;
+}
+
+.crafts:hover .shop-actions-wrapper {
+    display: block;
+}
+
+.crafts .shop-actions {
+    top: 50px;
+    left: 0;
+}
+
+.womens-wear {
+    position: relative;
+    height: 322px;
+    margin-bottom: 5px;
+    background-image: url('../img/womens-wear.jpg');
+    background-size: cover;
+}
+
+.womens-wear:hover .shop-actions-wrapper {
+    display: block;
+}
+
+.womens-wear .shop-actions {
+    top: 30px;
+    right: 0;
+}
+
+.womens-wear .items-header {
+    width: 267px;
+    bottom: 10px;
+    left: 0;
+}
+
+.womens-wear-title {
+    font-size: 3.5rem;
+    color: #ef5966;
+    text-transform: uppercase;
+}
+
+.chidrens-wear {
+    position: relative;
+    height: 245px;
+    margin-bottom: 5px;
+    background-image: url('../img/childrens-wear.jpg');
+    background-size: cover;
+}
+
+.chidrens-wear:hover .shop-actions-wrapper {
+    display: block;
+}
+
+.chidrens-wear .shop-actions {
+    bottom: 27px;
+    right: 0;
+}
+
+.jewerly {
+    position: relative;
+    height: 510px;
+    background-image: url('../img/jewerly-shop.jpg');
+    background-size: cover;
+}
+
+.jewerly:hover .shop-actions-wrapper {
+    display: block;
+}
+
+.jewerly .shop-actions {
+    top: 50px;
+    left: 0;
+}
+
+.jewerly .items-header {
+    width: 400px;
+    height: 90px;
+    transform: rotate(-90deg);
+    bottom: 155px;
+    right: -155px;
+}
+
+.jewerly-title {
+    font-size: 6.44rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.jewerly-additional {
+    position: absolute;
+    right: 0px;
+    top: 130px;
+    width: 105px;
+    height: 90px;
+}
+
+.jewerly-additional::before {
+    content: '';
+    position: absolute;
+    top: 79px;
+    left: 5px;
+    transform: rotate(-135deg);
+    border: 11px solid transparent;
+    border-top: 11px solid #c6535d;
+}
+
+.jewerly-additional span {
+    position: absolute;
+    width: 53px;
+    height: 53px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.jewerly-additional span::after,
+.jewerly-additional span::before {
+    width: 17px;
+    height: 2px;
+    background-color: #f06470;
+    left: 50%;
+}
+
+.jewerly-additional span::after {
+    top: 26px;
+    transform: rotate(40deg) translateX(-50%);
+}
+
+.jewerly-additional span::before {
+    top: 25px;
+    transform: rotate(-40deg) translateX(-50%);
+}
+
+.title-wrapper {
+    position: relative;
+    padding-top: 35px;
+    border-bottom: 1px solid #b9b9b9;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    bottom: -1px;
+    margin-left: 30px;
+    padding-right: 10px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid #f0626e;
+    font-size: 3rem;
+    color: #00a1be;
+}
+
+.arrow-wrapper {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.arrow {
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 79px;
+    background-color: #3c3c3c;
+    transition: 0.5s;
+}
+
+.arrow:hover {
+    color: #434343;
+    background-color: #05aecc;
+}
+
+.left-arrow {
+    margin-right: 1px;
+}
+
+.left-arrow::before,
+.left-arrow::after,
+.right-arrow::before,
+.right-arrow::after {
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+    left: 50%;
+}
+
+.left-arrow::before {
+    transform: rotate(-140deg) translateX(50%);
+    top: 61%;
+}
+
+.left-arrow::after {
+    transform: rotate(140deg) translateX(50%);
+    top: 37%;
+}
+
+.right-arrow::after {
+    transform: rotate(220deg) translateX(50%);
+    top: 50%;
+}
+
+.right-arrow::before {
+    transform: rotate(140deg) translateX(50%);
+    top: 49%;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    margin-top: 23px;
+}
+
+.product {
+    position: relative;
+    width: 370px;
+    height: 200px;
+}
+
+.product:hover .shop-actions-wrapper {
+    display: block;
+}
+
+.product .shop-actions {
+    top: 75px;
+    left: 38px;
+}
+
+.card {
+    padding: 40px;
+}
+
+.product .nav-card {
+    width: 145px;
+    height: 165px;
+    transition: 0.5s;
+}
+
+.new .product-description {
+    color: #05aecc;
+}
+
+.product .new-prod {
+    width: 370px;
+    height: 200px;
+}
+
+.product .card-text {
+    display: inline-block;
+    padding-left: 25px;
+    vertical-align: middle;
+    width: 145px;
+    font-size: 3rem;
+    color: #fff;
+    margin-top: -160px;
+    transition: 0.5s;
+}
+
+.product:hover .card-text {
+    text-shadow: -160px 0 0 #b2d330;
+}
+
+.product:hover .nav-card {
+    filter: blur(200px);
+}
+
+.product-wrapper {
+    position: relative;
+    border: 1px solid #dddddd;
+    width: 270px;
+}
+
+.product-wrapper.new::before,
+.product-wrapper.off::before {
+    position: absolute;
+    width: 80px;
+    height: 35px;
+    top: 15px;
+    left: 0;
+    font-size: 1.4rem;
+    line-height: 3.5rem;
+    padding-left: 10px;
+    color: #fff;
+}
+
+.product-wrapper.off::before {
+    content: '20% OFF';
+    background-color: #f0626e;
+}
+
+.product-wrapper.new::before {
+    content: 'New';
+    background-color: #00a1be;
+}
+
+.sub-price {
+    font-size: 1.6rem;
+}
+
+.sup-price {
+    font-size: 1.8rem;
+    position: relative;
+    bottom: 10px;
+}
+
+.about-shop-section {
+    border-bottom: 1px solid #b9b9b9;
+    padding-bottom: 30px;
+}
+
+.about-shop-section .product {
+    height: 230px;
+}
+
+.product-title {
+    font-size: 1.8rem;
+    margin: 13px 13px 5px 13px;
+}
+
+.product-description {
+    color: #f0626e;
+    font-size: 1.3rem;
+    margin-left: 13px;
+    margin-bottom: 13px;
+}
+
+.product-img {
+    width: 100%;
+    height: 290px;
+    transition: 0.5s;
+}
+
+.product-img:hover {
+    box-shadow: 0 0 10px 2px #434343;
+}
+
+.actions-wrapper {
+    height: 53px;
+    border-top: 1px solid #dddddd;
+}
+
+.action-icon {
+    width: 57px;
+    height: 53px;
+    color: #b9b9b9;
+    font-size: 2.1rem;
+    line-height: 53px;
+    text-align: center;
+    border-right: 1px solid #dddddd;
+    transition: 0.5s;
+}
+
+.action-icon:hover {
+    color: #464646;
+}
+
+.actions-wrapper a {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.about-shop {
+    padding: 28px;
+    color: #464646;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+}
+
+.price {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    height: 53px;
+    width: 97px;
+    line-height: 53px;
+    color: #fff;
+    font-size: 2.5rem;
+    transition: 0.5s;
+}
+
+.register-now {
+    display: block;
+    margin: 0 auto;
+    width: 648px;
+    height: 66px;
+    line-height: 62px;
+    font-size: 2.76rem;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.register-now:hover,
+.subscribe:hover,
+.tooltip-wrapper button:hover {
+    background-color: #f0626e;
+    color: #434343;
+}
+
+.page-footer {
+    height: 490px;
+    margin-top: -490px;
+    padding-left: 23px;
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+.footer-col {
+    display: inline-block;
+    min-width: 200px;
+    vertical-align: top;
+}
+
+.footer-title {
+    line-height: 95px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.footer-col li {
+    font-size: 1.6rem;
+    line-height: 3rem;
+}
+
+.footer-col li:hover {
+    text-decoration: underline;
+}
+
+.page-footer .footer-col:first-of-type {
+    margin-right: 40px;
+}
+
+.page-footer .footer-col:nth-of-type(2) {
+    margin-right: 40px;
+}
+
+.page-footer .footer-col:nth-of-type(3) {
+    margin-right: 46px;
+}
+
+.subscribe-wrapper {
+    width: 379px;
+    height: 123px;
+    border: 1px solid #b9b9b9;
+}
+
+.subscribe-address {
+    margin: 0 auto;
+    line-height: 7rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.subscribe {
+    width: 100%;
+    height: 52px;
+    line-height: 52px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.social-title {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 3rem;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    margin-right: 11px;
+    text-align: center;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    box-shadow: -5px 5px 0 0 #434343;
+}
+
+.wi-fi {
+    background-color: #f8bc2e;
+}
+
+.facebook {
+    background-color: #39599f;
+}
+
+.twitter {
+    background-color: #45b0e3;
+}
+
+.circles {
+    position: relative;
+    border: 1px solid #b9b9b9;
+    background: none;
+}
+
+.circles::after,
+.circles::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.circles::after {
+    background-color: #0063dc;
+    left: 11px;
+}
+
+.circles::before {
+    background-color: #ff0084;
+    left: 27px;
+}
+
+.google {
+    background-color: #1872bf;
+}
+
+.copyright-wrapper {
+    padding: 25px;
+    margin-top: 48px;
+    border-top: 1px solid #b9b9b9;
+    border-bottom: 1px solid #b9b9b9;
+    font-size: 1.4rem;
+    color: #434343;
+}
+
+.copyright {
+    float: left;
+}
+
+.author {
+    float: right;
+}
+
+.colored {
+    color: #f0626e;
+}

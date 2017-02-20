@@ -1,0 +1,376 @@
+@keyframes ding-dong {
+    50% {
+        transform: rotate(30deg) scale(1.5);
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes map-mark {
+    50% {
+        transform: scale(0.1, 1.2);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+
+@keyframes shadow-transform {
+    from {
+        box-shadow: 0 0 0 7px #7b40d3;
+    }
+    to {
+        box-shadow: 0 0 0 10px #61a0dc;
+    }
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    height: 100%;
+    font-size: 10px;
+}
+
+address {
+    display: inline;
+}
+
+a {
+    transition: all .5s;
+}
+
+a:hover {
+    text-shadow: 1px 0 0 black;
+    text-decoration: underline;
+}
+
+.clearfix::after {
+    clear: both;
+    content: '';
+    display: block;
+}
+
+.page-wrapper {
+    width: 1024px;
+    margin: 0 auto;
+    padding-bottom: 75px;
+    font-size: 1.789rem;
+}
+
+.page-header {
+    height: 251px;
+    border-bottom: 1px solid rgba(76, 94, 171, 0.5);
+    background-color: #4c5eab;
+    padding: 60px 75px;
+    color: white;
+}
+
+.page-header a {
+    color: white;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.9rem;
+    font-weight: bold;
+}
+
+.appointment {
+    font-size: 2.276rem;
+}
+
+.circle {
+    float: left;
+    width: 140px;
+    height: 140px;
+    margin-right: 30px;
+    border-radius: 50%;
+    background-color: #d6d6d6;
+    overflow: hidden;
+}
+
+.self-info {
+    float: left;
+    margin-top: 25px;
+}
+
+.contact-info {
+    width: 150px;
+    float: right;
+}
+
+.contact-info li {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.contact-info li::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 16px;
+    top: 6px;
+    left: -30px;
+    background-image: url('../img/sprite.png');
+    background-repeat: no-repeat;
+    z-index: 100;
+}
+
+.address::before {
+    background-position: 0 -33px;
+}
+
+.address:hover::before {
+    animation-name: map-mark;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.web::before {
+    background-position: 0 -17px;
+}
+
+.web:hover::before {
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform-origin: 7px 6.5px;
+}
+
+.call:hover::before {
+    animation-name: ding-dong;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.page-aside {
+    float: left;
+    padding: 40px 15px 40px 80px;
+    width: 344px;
+    box-shadow: 0 0 70px 70px rgba(214, 214, 214, 0.2) inset ;
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.6rem;
+}
+
+.section-title::before {
+    content: '';
+    display: inline-block;
+    width: 45px;
+    height: 45px;
+    margin-right: 21px;
+    border-radius: 50%;
+    vertical-align: middle;
+    background-color: #336699;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 13px;
+    width: 18px;
+    height: 18px;
+    background-image: url('../img/sprite.png');
+    background-repeat: no-repeat;
+    background-position: 0 -115px;
+}
+
+.page-aside > article {
+    margin-bottom: 50px;
+}
+
+.interests-list li {
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+}
+
+.interests-list li a {
+    color: black;
+}
+
+.interests-list li:last-child {
+    margin-right: 0px;
+}
+
+.interests-list li a::before {
+    content: '';
+    display: block;
+    width: 57px;
+    height: 57px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border: 7px solid #4c5eab;
+}
+
+.interests-list li a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 24px;
+    left: 17px;
+    background-image: url('../img/sprite.png');
+    background-repeat: no-repeat;
+}
+
+.interests-list li a:hover::after {
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+
+.music a::after {
+    background-position: 0px -93px;
+    height: 22px;
+    top: 18px;
+}
+
+.gaming a::after {
+    background-position: 0px -74px;
+    height: 19px;
+    top: 18px;
+}
+
+.biking a::after {
+    background-position: 0px -48px;
+    height: 26px;
+    top: 16px;
+}
+
+.reference-list li {
+    position: relative;
+    display: block;
+    margin-bottom: 45px;
+    padding-left: 35px;
+}
+
+.reference-list li a {
+    display: block;
+    position: relative;
+    margin: 5px 0;
+    color: #4c5eab;
+}
+
+.reference-list li:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    top: 60%;
+    left: 12px;
+    height: 140%;
+    width: 1px;
+    background-color: #999695;
+}
+
+.reference-list li:hover::after {
+    animation-name: shadow-transform;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.reference-list li::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    top: 50%;
+    left: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 7px #999695;
+}
+
+.awwards-list li {
+    margin-bottom: 10px;
+}
+
+.page-aside a,
+.awwards li,
+h3 {
+    font-weight: 600;
+}
+
+main {
+    float: left;
+    width: 680px;
+    padding: 40px 80px 0px 100px;
+}
+
+main .section-title::before {
+    margin-right: 40px;
+}
+
+main .section-title {
+    right: 85px;
+}
+
+
+.portfolio {
+    font-size: 0;
+}
+
+.portfolio-item {
+    display: inline-block;
+    width: 240px;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 34px 10px rgba(129, 129, 129, 0.1);
+    color: black;
+    text-align: center;
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 0 34px 10px rgba(76, 94, 171, 0.3);
+    text-decoration: none;
+}
+
+.portfolio-item:nth-child(2n) {
+    margin-right: 0;
+}
+
+.portfolio-item img {
+    height: 165px;
+    width: 240px;
+}
+
+.portfolio-item figcaption {
+    padding: 15px;
+    font-size: 1.789rem;
+}
+
+.page-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+}
+
+.footer-wrapper {
+    width: 1024px;
+    margin: 0 auto;
+    padding: 0 80px;
+    background-color: #4d5fab;
+    line-height: 75px;
+    font-size: 1.789rem;
+    color: white;
+}
+
+.bold {
+    font-weight: bold;
+    color: white;
+}

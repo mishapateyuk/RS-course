@@ -1,0 +1,99 @@
+@mixin input-hide () {
+    position: absolute;
+    opacity: 0;
+}
+
+@mixin super-center () {
+    vertical-align: middle;
+    text-align: center;
+}
+
+@mixin font-size-and-weight ($font-size, $font-weight:bold) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+
+@mixin absolute-pseudo ($top, $left, $width, $height, $content: '') {
+    content: $content;
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+@mixin block-width-height ($width, $height) {
+    display: block;
+    width: $width;
+    height: $height;
+}
+
+@mixin width-height-position ($width, $height, $position: static) {
+    width: $width;
+    height: $height;
+    position: $position;
+}
+
+@mixin inline-block-width-height ($width: 100%, $height: 100%) {
+    display: inline-block;
+    width: $width;
+    height: $height;
+}
+
+@mixin float-width($float, $width) {
+    float: $float;
+    width: $width;
+}
+
+@mixin background-image ($path, $position-x, $position-y, $background-repeat: no-repeat) {
+    background-image: url($path);
+    background-position: $position-x $position-y;
+    background-repeat: $background-repeat;
+}
+
+@mixin range-thumb($width, $height, $border, $border-radius, $background-color) {
+    &::-moz-range-thumb {
+        width: $width;
+        height: $height;
+        border: $border;
+        border-radius: $border-radius;
+        background-color: $background-color;
+    }
+    &::-webkit-slider-thumb {
+        width: $width;
+        height: $height;
+        border: $border;
+        border-radius: $border-radius;
+        background-color: $background-color;
+        -webkit-appearance: none;
+        margin-top: -5px;
+    }
+    &::-ms-thumb {
+        width: $width;
+        height: $height;
+        border: $border;
+        border-radius: $border-radius;
+        background-color: $background-color;
+    }
+}
+
+@mixin range-track($width, $height, $border-radius, $background-color) {
+    &::-moz-range-track {
+        width: $width;
+        height: $height;
+        border-radius: $border-radius;
+        background-color: $background-color;
+    }
+    &::-ms-track {
+        width: $width;
+        height: $height;
+        border-radius: $border-radius;
+        background-color: $background-color;
+    }
+    &::-webkit-slider-runnable-track {
+        width: $width;
+        height: $height;
+        border-radius: $border-radius;
+        background-color: $background-color;
+    }
+}

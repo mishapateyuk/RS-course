@@ -1,0 +1,665 @@
+.hidden-title{
+    position: absolute;
+    font-size: 0;
+}
+
+.hidden-label {
+    @extend .hidden-title;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.widget {
+    width: 307px;
+    margin-bottom: 50px;
+    background-color: $widgets-background-color;
+}
+
+.finance-item {
+    height: 117px;
+    border-bottom: 1px solid $widgets-border-color;
+    font-size: 0;
+    padding: 31px 16px 34px 33px;
+    &:not(:first-of-type) {
+        height: 109px;
+    }
+    &:last-of-type {
+        border-bottom: none;
+    }
+    div {
+        display: inline-block;
+    }
+}
+
+.currency-type {
+    @include width-height-position (71px, auto ,relative);
+    top: -8px;
+    left: -2px;
+    border-right: 1px solid $widgets-border-color;
+    font-size: 1.811rem;
+}
+
+.money-amount {
+    font-size: 4.075rem;
+    input {
+        @include width-height-position(181px, 100%);
+        text-align: right;
+    }
+}
+
+.finance-widget {
+    .widget-button {
+        background-color: $widgets-nav-color;
+    }
+    .widget-nav {
+        background-color: $widgets-nav-color;
+    }
+}
+
+.widget-nav {
+    height: 64px;
+    font-size: 0;
+    .widget-button {
+        &.active-button {
+            background-color: $widgets-active-elements-color;
+        }
+        &:hover {
+            background-color: $widgets-active-elements-color;
+        }
+    }
+}
+
+.widget-button {
+    @include inline-block-width-height (auto);
+    position: relative;
+    transition: 0.5s;
+}
+
+.money-graph {
+    @include float-width(left, 102px);
+    &::before {
+        @include absolute-pseudo(10px, 37px, 50px, 50px);
+        @include background-image ('../img/widget-button-sprite.png', 0, -234px);
+    }
+}
+
+.money-menu {
+    @include float-width(right, 70px);
+    &::before {
+        @include absolute-pseudo(10px, 21px, 50px, 50px);
+        @include background-image ('../img/widget-button-sprite.png', 0, -194px);
+    }
+}
+
+.add-currency {
+    @include float-width(right, 83px);
+}
+
+.add {
+    position: relative;
+    &::after {
+        @include absolute-pseudo(31px, 30px, 28px, 3px);
+        background-color: $widgets-nav-pseudo-color;
+    }
+    &::before {
+        @include absolute-pseudo(31px, 30px, 28px, 3px);
+        background-color: $widgets-nav-pseudo-color;
+        transform: rotate(90deg);
+    }
+}
+
+.calendar-nav {
+    height: 85px;
+    font-size: 0;
+    .prev-date {
+        @include inline-block-width-height (40px);
+        position: relative;
+        background-color: $widgets-nav-color;
+        vertical-align: middle;
+        transition: 0.5s;
+        &::before {
+            @include absolute-pseudo(45px, 13px, 17px, 3px);
+            background-color: $WHITE-COLOR;
+            transform: rotate(45deg);
+        }
+        &::after {
+            @include absolute-pseudo(34px, 12px, 17px, 3px);
+            background-color: $WHITE-COLOR;
+            transform: rotate(-45deg);
+        }
+        &:hover {
+            cursor: pointer;
+            &::before {
+                background-color: $widgets-active-elements-color;
+            }
+            &::after {
+                background-color: $widgets-active-elements-color;
+            }
+        }
+    }
+    .next-date {
+        @extend .prev-date;
+        &::before {
+            @include absolute-pseudo(34px, 8px, 17px, 3px);
+            background-color: $WHITE-COLOR;
+            transform: rotate(45deg);
+        }
+        &::after {
+            @include absolute-pseudo(45px, 8px, 17px, 3px);
+            background-color: $WHITE-COLOR;
+            transform: rotate(-45deg);
+        }
+        &:hover {
+            cursor: pointer;
+            &::before {
+                background-color: $widgets-active-elements-color;
+            }
+            &::after {
+                background-color: $widgets-active-elements-color;
+            }
+        }
+    }
+    .date {
+        @include inline-block-width-height(227px);
+        @include super-center();
+        background-color: $widgets-nav-color;
+        padding-top: 13px;
+        color: $WHITE-COLOR;
+        .year{
+            font-size: 1.721rem;
+            margin-bottom: 6px;
+        }
+        .month{
+            font-size: 1.811rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.calendar-table {
+    width: 100%;
+    font-size: 1.721rem;
+    border-collapse: collapse;
+    padding-right: 5px;
+    background-color: $WHITE-COLOR;
+    tr {
+        text-align: center;
+        color: $calendar-font-color;
+        &:nth-child(2) {
+            td {
+                padding-top: 18px;
+            }
+        }
+        td {
+            height: 46px;
+        }
+        a {
+            @include inline-block-width-height(30px, 30px)
+            border-radius: 50%;
+            line-height: 30px;
+            &:hover {
+                color: $widgets-additional-color;
+            }
+        }
+    }
+    .current-day {
+        background-color: $widgets-active-elements-color;
+        color: $WHITE-COLOR;
+    }
+    .table-head {
+        background-color: $widgets-additional-color;
+        font-weight: bold;
+        height: 57px;
+    }
+}
+
+.weather-widget {
+    position: relative;
+    .widget-button {
+        width: 25%;
+        background-color: $WHITE-COLOR;
+    }
+}
+
+.weather-display {
+    @include width-height-position(auto, 248px, relative);
+}
+
+.weather-picture {
+    @include width-height-position(100%, 100%)
+}
+
+.add-weather.add::before {
+    top: 29px;
+    left: 31px;
+    background-color: $widgets-additional-color;
+}
+
+.add-weather.add::after {
+    @extend .add-weather.add::before;
+}
+
+.weather-description {
+    position: absolute;
+    bottom: 8px;
+    left: 12px;
+    font-size: 1.675rem;
+    color: $WHITE-COLOR;
+    line-height: 2.24rem;
+    letter-spacing: 0.04rem;
+}
+
+.temperature {
+    margin-bottom: -3px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 72px;
+    right: 5px;
+    .slider-dot {
+        @include inline-block-width-height(7px, 7px)
+        margin-right: 6px;
+        border-radius: 50%;
+        background-color: $slider-dots-color;
+        &:hover {
+            background-color: darken($slider-dots-color, 20%);
+        }
+    }
+}
+
+.fahrenheit::before {
+    @include absolute-pseudo(10px, 28px, 50px, 50px);
+    @include background-image('../img/widget-button-sprite.png', 2px ,-143px);
+}
+
+.celsius::before {
+    @include absolute-pseudo(10px, 27px, 50px, 50px);
+    @include background-image('../img/widget-button-sprite.png', 0 ,-93px);
+}
+
+.weather-menu::before {
+    @include absolute-pseudo(10px, 20px, 50px, 50px);
+    @include background-image('../img/widget-button-sprite.png', 0 ,-40px);
+}
+
+.dialog-widget {
+    .widget-nav {
+        background-color: $widgets-additional-color;
+        .widget-button {
+            background-color: $widgets-additional-color;
+            &:hover {
+                background-color: darken($widgets-additional-color, 20%);
+            }
+        }
+        @at-root .dialog-menu {
+            @include float-width(left, 75px);
+            &::before {
+                @include absolute-pseudo(10px, 17px, 50px, 50px);
+                @include background-image('../img/widget-button-sprite.png', 1px, 8px);
+            }
+        }
+        @at-root .add-dialog {
+            @include float-width(right, 54px);
+            &.add:before {
+                top: 31px;
+                left: 13px;
+                background-color: $WHITE-COLOR;
+            }
+            &.add:after {
+                top: 31px;
+                left: 13px;
+                background-color: $WHITE-COLOR;
+            }
+        }
+    }
+    @at-root .dialog-list-item {
+        height: 78px;
+        border-bottom: 1px solid $widgets-border-color;
+        padding: 13px 16px 12px 16px;
+        &:last-of-type {
+            border-bottom: none;
+        }
+        & > div {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        &:hover {
+            box-shadow: 0 0 5px 0 $widgets-additional-color inset;
+            cursor: pointer;
+        }
+        .interlocutor-avatar {
+            margin-top: 1px;
+            margin-right: 15px;
+        }
+        .dialog-details {
+            letter-spacing: 0.02rem;
+            line-height: 2.48rem;
+            width: 196px;
+            .interlocutor {
+                @include font-size-and-weight(1.811rem);
+                color: $interlocutor-color;
+            }
+            .message-detail {
+                font-size: 1.358rem;
+                color: $message-details-color;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .user-status {
+                @include width-height-position(8px, 8px);
+                border-radius: 50%;
+                line-height: 51px;
+                &.offline-user {
+                    background-color: $offline-user-indicator-color;
+                }
+                &.online-user {
+                    background-color: $widgets-additional-color;
+                }
+            }
+            .sent-message {
+                position: relative;
+                &::before {
+                    @include inline-block-width-height(8px, 2px);
+                    content: '';
+                    background-color: $online-user-indicator-color;
+                    transform: rotate(42deg) translate(-2px, 2px);
+                    transform-origin: 8px 2px;
+                    margin-right: 7px;
+                }
+                &::after {
+                    @include absolute-pseudo(12px, 4px, 12px, 2px);
+                    transform: rotate(137deg);
+                    background-color: $online-user-indicator-color;
+                }
+            }
+            .user-is-typing {
+                font-style: italic;
+            }
+            .not-delevired-message {
+                position: relative;
+                &::before {
+                    @include inline-block-width-height(12px, 2px);
+                    content: '';
+                    margin-right: 5px;
+                    transform: rotate(45deg) translate(-4px, -1.5px);
+                    transform-origin: 8px 2px;
+                    background-color: $not-delevired-message-indicator-color;
+                }
+                &::after {
+                    @include absolute-pseudo(10.5px, -0.5px, 12px, 2px);
+                    transform: rotate(135deg);
+                    background-color: $not-delevired-message-indicator-color;
+                }
+            }
+        }
+    }
+}
+
+.authorization-widget {
+    .widget-button {
+        @include font-size-and-weight(1.811rem);
+        letter-spacing: 0.018rem;
+        &.sign-up-button {
+            background-color: $sign-up-button-color;
+            color: $widgets-nav-color;
+            width: 157px;
+            &:hover {
+                background-color: darken($sign-up-button-color, 20%);
+            }
+        }
+        &.sign-in-button {
+            background-color: $widgets-nav-color;
+            color: $WHITE-COLOR;
+            width: 150px;
+            &:hover {
+                background-color: darken($sign-up-button-color, 20%);
+            }
+        }
+    }
+    .email {
+        @include width-height-position(auto, 74px, relative);
+        padding-left: 68px;
+        border-bottom: 1px solid $widgets-border-color;
+        &::before {
+            @include absolute-pseudo(25px, 24px, 25px, 24px)
+            @include background-image('../img/sprite-autorization.jpg', 0, 0);
+        }
+        input {
+            @include width-height-position(100%, 100%);
+            font-size: 2.038rem;
+            color: $input-font-color;
+            letter-spacing: 0.04rem;
+        }
+    }
+    .active-authorization {
+        box-shadow: 4px 0 0 0 $widgets-active-elements-color inset;
+    }
+    .password {
+        @include width-height-position(auto, 70px, relative);
+        padding-left: 68px;
+        &::before {
+            @include absolute-pseudo(21px, 25px, 25px, 24px)
+            @include background-image('../img/sprite-autorization.jpg', 0, -25px);
+        }
+        input {
+            @include width-height-position(100%, 100%);
+            font-size: 2.038rem;
+            color: $input-font-color;
+            letter-spacing: 0.04rem;
+        }
+    }
+}
+
+.input-style-guide {
+    width: 305px;
+    padding: 14px 10px 11px 12px ;
+    background-color: $WHITE-COLOR;
+    .left-column {
+        width: 215px;
+        margin-right: 16px;
+        margin-top: 1px;
+    }
+    input[type="range"] {
+        @include range-thumb(18px, 18px, none, 50%, $widgets-nav-color);
+        @include range-track(100%, 8px, 3px, $widgets-nav-color);
+        @include width-height-position(212px, 30px);
+        margin-left: 2px;
+        background: transparent;
+        -webkit-appearance: none;
+    }
+    .right-column {
+        input:last-of-type {
+            & + label {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.left-column {
+    float:left;
+}
+
+.right-column {
+    float: right;
+}
+
+.input-text-style {
+    @include width-height-position(215px, 51px);
+    padding-left: 12px;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    font-size: 2.038rem;
+    letter-spacing: 0.025rem;
+}
+
+.valid-input {
+    border-color: $widgets-additional-color;
+    color: $widgets-additional-color;
+    margin-bottom: 22px;
+}
+
+.invalid-input {
+    margin-top: 19px;
+    padding-left: 11px;
+    border-color: $widgets-active-elements-color;
+    color: $widgets-active-elements-color;
+}
+
+.music-player-widget {
+    width: 730px;
+    background-color: $WHITE-COLOR;
+    padding: 7px 14px 15px 8px;
+    .left-column {
+        &:last-of-type {
+            padding-left: 31px;
+            padding-top: 13px;
+        }
+    }
+}
+
+.album-cover {
+    @include block-width-height(126px, 126px);
+    margin-bottom: 12px;
+}
+
+.follow-band {
+    @include width-height-position(125px, 40px, relative);
+    @include font-size-and-weight(1.358rem);
+    background-color: $widgets-nav-color;
+    color: $WHITE-COLOR;
+    padding-left: 30px;
+    &::before {
+        @include absolute-pseudo(18px, 19px, 13px, 3px);
+        background-color: $WHITE-COLOR;
+        transform: rotate(90deg);
+    }
+    &::after {
+        @include absolute-pseudo(18px, 19px, 13px, 3px);
+        background-color: $WHITE-COLOR;
+    }
+    &:hover {
+        color: $widgets-nav-color;
+        background-color: $widgets-additional-color;
+        &::before {
+            background-color: $widgets-nav-color;
+        }
+        &::after {
+            background-color: $widgets-nav-color;
+        }
+    }
+}
+
+.song-name  {
+    margin-bottom: 7px;
+    margin-left: -1px;
+    color: $song-name-color;
+    @include font-size-and-weight(2.264rem);
+}
+
+.band-name {
+    @include font-size-and-weight(2.264rem);
+    color: $band-name-color;
+    margin-bottom: 7px;
+}
+
+.progress-indicator {
+    width: 549px;
+    padding-top: 11px;
+    margin-bottom: 28px;
+}
+
+.full-indicator {
+    @include width-height-position(488px, 9px, relative);
+    background-color: $song-indicator-progress;
+    border-radius: 5px;
+}
+
+.song-indicator {
+    @include width-height-position(auto, 100%, absolute);
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+}
+
+.current-indicator {
+    background-color: $widgets-additional-color;
+}
+
+.downloaded-indicator {
+    background-color: lighten($widgets-additional-color, 20%)
+}
+
+.current-song-time {
+    margin-top: -16px;
+    font-size: 1.585rem;
+    color: $song-indicator-progress;
+}
+
+.player-panel-control {
+    margin-left: -4px;
+}
+
+.control-button {
+    @include inline-block-width-height (46px, 45px)
+    @include background-image('../img/player-sprite.png', auto, auto);
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $WHITE-COLOR;
+    &:hover {
+        background-color: $widgets-nav-color;
+    }
+}
+
+.play-button {
+    background-position: 11px -300px;
+    margin-right: 34px;
+    &.playing {
+        background-color: $widgets-additional-color;
+    }
+}
+
+.prev-song-button {
+    background-position: 9px -259px;
+    margin-right: 3px;
+}
+
+.next-song-button {
+    background-position: 9px -213px;
+    margin-right: 18px;
+}
+
+.shuffle-button {
+    background-position: 9px -168px;
+    margin-right: 27px;
+}
+
+.repeat-button {
+    background-position: 9px -78px;
+    margin-right: 29px;
+}
+
+.like-button {
+    background-position: 11px -122px;
+    margin-right: 28px;
+}
+
+.like-button.liked {
+    background-position: 10px -347px;
+}
+
+.add-song-button {
+    background-position: 11px 11px;
+    margin-right: 25px;
+}
+
+.share-song-button {
+    background-position: 20px -33px;
+}

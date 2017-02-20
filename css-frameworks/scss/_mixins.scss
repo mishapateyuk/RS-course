@@ -1,0 +1,21 @@
+@mixin absolute-pseudo ($top, $left, $width, $height, $content: '') {
+    content: $content;
+    position: absolute;
+    top: $top;
+    left: $left;
+    width: $width;
+    height: $height;
+}
+
+@mixin display-width-height-position ($display, $width, $height, $position: static) {
+    display: $display;
+    width: $width;
+    height: $height;
+    position: $position;
+}
+
+@mixin background-image ($path, $position-x, $position-y, $background-repeat: no-repeat) {
+    background-image: url($path);
+    background-position: $position-x $position-y;
+    background-repeat: $background-repeat;
+}

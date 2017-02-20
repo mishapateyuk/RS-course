@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="finance-widget widget">
+        <h2 class="hidden-title">Finance widget</h2>
+        <label for="usd" class="hidden-label">enter amount of usd</label>
+        <label for="gbp" class="hidden-label">enter amount of GB pound</label>
+        <ul class="finance-list" role="list" aria-label="list of money">
+            <li class="finance-item" aria-label="USD course" role="listitem">
+                <div class="currency-type">
+                    USD
+                </div>
+                <div class="money-amount">
+                    
+                    <input id="usd" type="text" placeholder="$356.3">
+                </div>
+            </li>
+            <li class="finance-item" aria-label="GPB course" role="listitem">
+                <div class="currency-type">
+                    GBP
+                </div>
+                <div class="money-amount">
+                    
+                    <input id="gbp" type="text" placeholder="£156.3">
+                </div>
+            </li>
+        </ul>
+        <div class="widget-nav clearfix" role="navigation">
+            <button class="widget-button money-graph active-button" aria-label="money-graphic"></button>
+            <button class="widget-button money-menu" aria-label="money-menu"></button>
+            <button class="widget-button add-currency add" aria-label="add-currency"></button>
+        </div>
+    </div>
+    <div class="calendar-widget widget">
+        <h2 class="hidden-title">Calendar widget</h2>
+        <div class="calendar-nav" role="navigation">
+            <button class="prev-date" aria-label="go to previous day"></button>
+            <div class="date">
+                <p class="year">2012</p>
+                <p class="month">july</p>
+            </div>
+            <button class="next-date" aria-label="go to next day"></button>
+        </div>
+        <table class="calendar-table">
+            <tr class="table-head">
+                <th scope="col" aria-label="Sunday">S</th>
+                <th scope="col" aria-label="Monday">M</th>
+                <th scope="col" aria-label="Tuesday">T</th>
+                <th scope="col" aria-label="Wednesday">W</th>
+                <th scope="col" aria-label="Thursday">T</th>
+                <th scope="col" aria-label="Friday">F</th>
+                <th scope="col" aria-label="Saturday">S</th>
+            </tr>
+            <tr>
+                <td><a href="#" title="1 day of July">1</a></td>
+                <td><a href="#" title="2 day of July">2</a></td>
+                <td><a href="#" title="3 day of July">3</a></td>
+                <td><a href="#" title="4 day of July">4</a></td>
+                <td><a href="#" title="5 day of July">5</a></td>
+                <td><a href="#" title="6 day of July" class="current-day">6</a></td>
+                <td><a href="#" title="7 day of July">7</a></td>
+            </tr>
+            <tr>
+                <td><a href="#" title="8 day of July">8</a></td>
+                <td><a href="#" title="9 day of July">9</a></td>
+                <td><a href="#" title="10 day of July">10</a></td>
+                <td><a href="#" title="11 day of July">11</a></td>
+                <td><a href="#" title="12 day of July">12</a></td>
+                <td><a href="#" title="13 day of July">13</a></td>
+                <td><a href="#" title="14 day of July">14</a></td>
+            </tr>
+            <tr>
+                <td><a href="#" title="15 day of July">15</a></td>
+                <td><a href="#" title="16 day of July">16</a></td>
+                <td><a href="#" title="17 day of July">17</a></td>
+                <td><a href="#" title="18 day of July">18</a></td>
+                <td><a href="#" title="19 day of July">19</a></td>
+                <td><a href="#" title="20 day of July">20</a></td>
+                <td><a href="#" title="21 day of July">21</a></td>
+            </tr>
+            <tr>
+                <td><a href="#" title="22 day of July">22</a></td>
+                <td><a href="#" title="23 day of July">23</a></td>
+                <td><a href="#" title="24 day of July">24</a></td>
+                <td><a href="#" title="25 day of July">25</a></td>
+                <td><a href="#" title="26 day of July">26</a></td>
+                <td><a href="#" title="27 day of July">27</a></td>
+                <td><a href="#" title="28 day of July">28</a></td>
+            </tr>
+            <tr>
+                <td><a href="#" title="29 day of July">29</a></td>
+                <td><a href="#" title="30 day of July">30</a></td>
+                <td><a href="#" title="31 day of July">31</a></td>
+            </tr>
+        </table>
+    </div>
+    <div class="weather-widget widget">
+        <h2 class="hidden-title">Weather widget</h2>
+        <ul class="weather-slider" role="slider" aria-label="slider with weather information">
+            <li class="weather-display">
+                <img src="img/weather.jpg" alt="Zagora, Greece. Current time 8:34am. Temperature 73deg of fahrenheit">
+                <div class="weather-description">
+                    <div class="temperature">
+                        <img src="img/73deg.png" alt="73deg">
+                    </div>
+                    <p class="city-county" id="city-county">Zagora, Greece</p>
+                    <p class="local-time">8:34 am</p>
+                </div>
+            </li>
+        </ul>
+        <div class="slider-dots">
+            <a href="#" class="slider-dot" title="press shift + A to change slide" aria-labelledby="city-county"></a>
+            <a href="#" class="slider-dot" title="press shift + A to change slide"></a>
+            <a href="#" class="slider-dot" title="press shift + A to change slide"></a>
+        </div>
+        <div class="widget-nav">
+            <button class="widget-button fahrenheit active-button" aria-label="swith temperature to fahrenheit"></button>
+            <button class="widget-button celsius" aria-label="swith temperature to celsius"></button>
+            <button class="widget-button add-weather add" aria-label="add new region"></button>
+            <button class="widget-button weather-menu" aria-label="weather menu"></button>
+        </div>
+    </div>
+    <div class="dialog-widget widget">
+        <h2 class="hidden-title">Dialog widget</h2>
+        <div class="widget-nav clearfix">
+            <button class="widget-button dialog-menu" aria-label="dialog menu"></button>
+            <button class="widget-button add-dialog add" aria-label="start new dialog"></button>
+        </div>
+        <ul class="dialog-list" role="list">
+            <li class="dialog-list-item" role="button" aria-label="Yaroslav Lozhkin, online">
+                <div class="interlocutor-avatar">
+                    <img src="img/avatar-1.jpg" alt="lozhkin">
+                </div>
+                <div class="dialog-details">
+                    <p class="interlocutor">
+                        Yaroslav Lozhkin
+                    </p>
+                    <p class="message-detail">
+                        Alright got it!
+                    </p>
+                </div>
+                <div class="user-status online-user"></div>
+            </li>
+            <li class="dialog-list-item" role="button" aria-label="Michael Zenaty, offline">
+                <div class="interlocutor-avatar">
+                    <img src="img/avatar-2.jpg" alt="Zenaty">
+                </div>
+                <div class="dialog-details">
+                    <p class="interlocutor">
+                        Michael Zenaty
+                    </p>
+                    <p class="message-detail sent-message">
+                        Sent
+                    </p>
+                </div>
+                <div class="user-status offline-user"></div>
+            </li>
+            <li class="dialog-list-item" role="button" aria-label="Wells Riley, typing text">
+                <div class="interlocutor-avatar">
+                    <img src="img/avatar-3.jpg" alt="Riley">
+                </div>
+                <div class="dialog-details">
+                    <p class="interlocutor">
+                        Wells Riley
+                    </p>
+                    <p class="message-detail user-is-typing">
+                        Typing...
+                    </p>
+                </div>
+                <div class="user-status"></div>
+            </li>
+            <li class="dialog-list-item" role="button" aria-label="Matt Vickers, message is not dilivered">
+                <div class="interlocutor-avatar">
+                    <img src="img/avatar-4.jpg" alt="Vickers">
+                </div>
+                <div class="dialog-details">
+                    <p class="interlocutor">
+                        Matt Vickers
+                    </p>
+                    <p class="message-detail not-delevired-message">
+                        Not delivered
+                    </p>
+                </div>
+                <div class="user-status"></div>
+            </li>
+            <li class="dialog-list-item" role="button" aria-label="Divya Manian, online">
+                <div class="interlocutor-avatar">
+                    <img src="img/avatar-5.jpg" alt="Manian">
+                </div>
+                <div class="dialog-details">
+                    <p class="interlocutor">
+                        Divya Manian
+                    </p>
+                    <p class="message-detail">
+                        You can download it on git blabalbal
+                    </p>
+                </div>
+                <div class="user-status online-user"></div>
+            </li>
+            <li class="dialog-list-item" role="button" aria-label="Vin Thomas, message read">
+                <div class="interlocutor-avatar">
+                    <img src="img/avatar-6.jpg" alt="Thomas">
+                </div>
+                <div class="dialog-details">
+                    <p class="interlocutor">
+                        Vin Thomas
+                    </p>
+                    <p class="message-detail">
+                        Thank you!
+                    </p>
+                </div>
+                <div class="user-status"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="authorization-widget widget">
+        <h2 class="hidden-title">Authorization widget</h2>
+        <form action="URL" method="post">
+            <div class="email active-authorization">
+                <label for="email" class="hidden-label">enter you email here</label>
+                <input type="text" name="user-email" placeholder="Email Address..." id="email">
+            </div>
+            <div class="password">
+                <label for="pass" class="hidden-label">enter you password here</label>
+                <input id="pass" type="password" name="user-password" placeholder="Password...">
+            </div>
+            <div class="widget-nav">
+                <button class="widget-button sign-up-button" aria-label="SIGN UP">
+                    SIGN UP
+                </button>
+                <button class="widget-button sign-in-button" aria-label="SIGN IN">
+                    SIGN IN
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="input-style-guide widget clearfix">
+        <h2 class="hidden-title">Style-guide widget</h2>
+        <div class="left-column">
+            <input type="text" class="valid-input input-text-style" placeholder="Valid input" id="valid-input">
+            <label for="valid-input" class="hidden-label">input is valid</label>
+            <input type="range" min="0" max="100" step="1" value="69" id="range-input" aria-valuemin="0 smth" aria-valuemax="100 smth" aria-valuenow="69 smth">
+            <label for="range-input" class="hidden-label">this is range input of  smth value, use your keyboard to change value</label>
+            <input type="text" class="invalid-input input-text-style" placeholder="Invalid input" id="invalid-input">
+            <label for="invalid-input" class="hidden-label">input is invalid</label>
+        </div>
+        <div class="right-column">
+            <input type="checkbox" class="checked-checkbox" id="checkbox" aria-checked="true" checked >
+            <label for="checkbox" role="checkbox">this is checkbox for smth, also it is checked for default</label>
+            <input type="radio" class="checked-radio" id="checked-radio" checked>
+            <label for="checked-radio" role="radio" aria-checked="true">this is radiobutton for smth, also it is checked for default</label>
+            <input type="radio" class="not-checked-radio" id="not-checked-radio" aria-checked="false">
+            <label for="not-checked-radio" role="radio">this is radiobutton for smth</label>
+        </div>
+    </div>
+    <div class="music-player-widget clearfix">
+        <h2 class="hidden-title">Music-player widget</h2>
+        <div class="left-column">
+            <img src="img/album-cover.jpg" alt="album-cover" class="album-cover">
+            <button class="follow-band" aria-label="follow this band">FOLLOW</button>
+        </div>
+        <div class="left-column">
+            <h2 class="band-name">
+                Faded Paper Figures
+            </h2>
+            <h3 class="song-name">
+                Invent it all again
+            </h3>
+            <div class="progress-indicator clearfix" role="range" aria-label="this is indicator of song playing progress">
+                <div class="full-indicator">
+                    <div class="song-indicator downloaded-indicator" style="width: 79.5%"></div>
+                    <div class="song-indicator current-indicator" style="width: 61.5%"></div>
+                </div>
+                <div class="current-song-time right-column" id="current-song-time">-1:57</div>
+            </div>
+            <div class="player-panel-control">
+                <button class="control-button play-button playing" aria-labelledby="current-song-time"></button>
+                <button class="control-button prev-song-button" aria-label="previous-song"></button>
+                <button class="control-button next-song-button"  aria-label="next-song"></button>
+                <button class="control-button shuffle-button"  aria-label="shuffle-playlist"></button>
+                <button class="control-button repeat-button"  aria-label="repeat mode"></button>
+                <button class="control-button like-button liked"  aria-label="like this song"></button>
+                <button class="control-button add-song-button"  aria-label="add song"></button>
+                <button class="control-button share-song-button"  aria-label="share song"></button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

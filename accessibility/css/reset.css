@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    box-sizing: border-box;
+    color: inherit;
+}
+
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a:focus, a:active {
+    outline: 2px solid blue;
+}
+
+a {
+    text-decoration: none;
+}
+
+input,
+button {
+    border: none;
+}

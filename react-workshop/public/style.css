@@ -1,0 +1,88 @@
+header,
+body {
+    font-size: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    margin-top: 10px;
+    border-bottom: 1px solid black;
+}
+
+.progress-state,
+.task-wrapper {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
+    width: 25%;
+    text-align: center;
+}
+
+
+.progress-state:not(:last-child) {
+    border-right: 1px solid black;
+}
+
+.task-container {
+    margin: 10px auto;
+    padding: 20px 10px;
+    width: 90%;
+    border: 1px solid black;
+    box-shadow: 0 0 3px 0 black;
+}
+
+.left,
+.right {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 40%;
+    height: 20px;
+}
+
+.left::after,
+.left::before,
+.right::before,
+.right::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 4px;
+    background-color: black;
+    transition: 0.5s;
+}
+
+.left::after {
+    transform: rotate(45deg);
+    top: 24px;
+    left: 49px;
+}
+
+.left::before {
+    transform: rotate(-45deg);
+    top: 12px;
+    left: 49px;
+}
+
+.right::after {
+    transform: rotate(-45deg);
+    top: 24px;
+    left: 49px;
+}
+
+.right::before {
+    transform: rotate(45deg);
+    top: 12px;
+    left: 49px;
+}
+
+
+.left:hover::before,
+.left:hover::after,
+.right:hover::after,
+.right:hover::before {
+    background-color: red;
+}
